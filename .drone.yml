@@ -4,7 +4,7 @@ name: default
 
 steps:
   - name: build
-    image: quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11
+    image: adoptopenjdk/openjdk11
     commands:
       - echo hello
       - echo world
