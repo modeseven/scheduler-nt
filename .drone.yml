@@ -3,8 +3,9 @@ type: kubernetes
 name: default
 
 steps:
-  - name: greeting
-    image: alpine
+  - name: build
+    image: quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11
     commands:
       - echo hello
       - echo world
+      - ./mvnw clean package -Dquarkus.kubernetes.deploy=true
