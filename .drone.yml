@@ -5,6 +5,7 @@ name: default
 steps:
   - name: build
     image: adoptopenjdk/openjdk11
+    user: root
     commands:
       - echo hello
       - echo world
