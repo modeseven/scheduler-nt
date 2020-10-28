@@ -15,6 +15,7 @@ steps:
       repo: modeseven/rfds
       dockerfile: src/main/docker/Dockerfile.fast-jar
       auto_tag: true
+      auto_tag_suffix: amd64
       username:
         from_secret: dockerhub_username
       password:
