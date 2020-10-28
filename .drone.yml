@@ -14,8 +14,7 @@ steps:
     settings:
       repo: modeseven/rfds
       dockerfile: src/main/docker/Dockerfile.fast-jar
-      auto_tag: true
-      auto_tag_suffix: amd64
+      tags: ${DRONE_COMMIT}
       username:
         from_secret: dockerhub_username
       password:
