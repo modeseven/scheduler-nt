@@ -8,7 +8,7 @@ steps:
     user: 0
     commands:
       - chmod +rwx ./mvnw
-      - ./mvnw mvn package -Dquarkus.package.type=fast-jar 
+      - ./mvn mvn package -Dquarkus.package.type=fast-jar 
   - name: docker
     image: plugins/docker
     settings:
