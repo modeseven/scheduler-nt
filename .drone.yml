@@ -15,7 +15,7 @@ steps:
       repo: modeseven/rfds
       dockerfile: src/main/docker/Dockerfile.fast-jar
       tags:
-       - '0.1'
+       - firsttry
       username:
         from_secret: dockerhub_username
       password:
