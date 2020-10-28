@@ -7,7 +7,16 @@ steps:
     image: adoptopenjdk/openjdk11
     user: 0
     commands:
-      - echo hello
-      - echo world
       - chmod +rwx ./mvnw
-      - ./mvnw clean package -Dquarkus.kubernetes.deploy=true
+      - ./mvnw mvn package -Dquarkus.package.type=fast-jar 
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: modeseven/rfds
+      dockerfile: src/main/docker/Dockerfile.fast-jar
+      tags:
+       - '0.1'
+      username:
+        from_secret: dockerhub_username
+      password:
+        from_secret: dockerhub_password
